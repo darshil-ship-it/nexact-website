@@ -1,0 +1,64 @@
+.solutions-page { background: #fff; }
+.solutions-hero { padding-block: clamp(5rem, 10vw, 10rem) clamp(5rem, 9vw, 9rem); overflow: hidden; }
+.solutions-hero .container { display: grid; gap: clamp(2rem, 5vw, 5rem); }
+.solutions-hero__eyebrow, .solution-showcase__label { margin-bottom: 1.3rem; color: #4f7568; font-size: .75rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.solutions-hero h1 { max-width: none; margin: 0; color: #35534a; font-size: clamp(4rem, 12vw, 12rem); line-height: .85; letter-spacing: -.075em; }
+.solutions-hero__summary { max-width: 43rem; }
+.solutions-hero__statement { max-width: 19ch; margin-bottom: 1.25rem; color: #35534a; font-size: clamp(1.6rem, 3.5vw, 3.3rem); line-height: 1.1; letter-spacing: -.045em; }
+.solutions-hero__description { max-width: 35rem; margin: 0; color: #6d7c74; font-size: 1rem; line-height: 1.7; }
+
+.solution-showcase { overflow: hidden; padding-block: clamp(5rem, 9vw, 9rem); border-top: 1px solid #e2e8e3; }
+.solution-showcase:nth-child(odd):not(.solution-showcase--featured) { background: #f7f0e7; }
+.solution-showcase--featured { background: #35534a; color: #fff; }
+.solution-showcase__topline { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(53, 83, 74, .18); color: #52665e; font-size: .6875rem; font-weight: 700; letter-spacing: .15em; }
+.solution-showcase--featured .solution-showcase__topline { border-color: rgba(255, 255, 255, .25); color: #cbe6ad; }
+.solution-showcase__layout { display: grid; gap: clamp(2.5rem, 5vw, 5rem); padding-top: clamp(2rem, 5vw, 5rem); }
+.solution-showcase__intro { align-self: center; min-width: 0; }
+.solution-showcase__intro h2 { max-width: 12ch; margin-bottom: 1.4rem; color: #35534a; font-size: clamp(2.8rem, 6.5vw, 6.5rem); font-weight: 500; line-height: .98; letter-spacing: -.065em; text-wrap: balance; }
+.solution-showcase--featured .solution-showcase__intro h2 { color: #fff; font-size: clamp(3.15rem, 7.8vw, 8rem); }
+.solution-showcase--featured .solution-showcase__label { color: #cbe6ad; }
+.solution-showcase__description { max-width: 32rem; margin: 0; color: #65756d; font-size: clamp(1.0625rem, 1.65vw, 1.3rem); line-height: 1.55; }
+.solution-showcase--featured .solution-showcase__description { color: rgba(255, 255, 255, .74); }
+.solution-showcase__visual { min-width: 0; }
+.solution-showcase__visual > div { width: 100%; aspect-ratio: 4 / 3; border: 1px solid #dce5dd; border-radius: clamp(1.5rem, 3vw, 2.5rem); background: #eef2eb; }
+.solution-showcase--featured .solution-showcase__visual > div { aspect-ratio: 16 / 10; border-color: rgba(255, 255, 255, .19); background: #4f7568; color: #eef7ed; }
+.solution-showcase:nth-child(odd):not(.solution-showcase--featured) .solution-showcase__visual > div { background: #f2eee5; }
+.solution-showcase__visual .media-placeholder span { font-size: .6875rem; letter-spacing: .1em; }
+.solution-showcase__details { display: grid; gap: 1.7rem; align-content: start; }
+.solution-showcase__detail { padding-top: 1.05rem; border-top: 1px solid #dce3df; }
+.solution-showcase--featured .solution-showcase__detail { border-color: rgba(255, 255, 255, .25); }
+.solution-showcase__detail h3 { margin-bottom: .8rem; color: #4f7568; font-size: .6875rem; font-weight: 700; letter-spacing: .15em; line-height: 1.4; text-transform: uppercase; }
+.solution-showcase--featured .solution-showcase__detail h3 { color: #cbe6ad; }
+.solution-showcase__detail p, .solution-showcase__outcomes li { margin: 0; color: #52665e; font-size: .9375rem; line-height: 1.65; }
+.solution-showcase--featured .solution-showcase__detail p, .solution-showcase--featured .solution-showcase__outcomes li { color: rgba(255, 255, 255, .78); }
+.solution-showcase__outcomes ul { display: grid; gap: .55rem; margin: 0; padding: 0; list-style: none; }
+.solution-showcase__outcomes li { display: flex; gap: .7rem; align-items: baseline; }
+.solution-showcase__outcomes li::before { content: ""; flex: 0 0 .35rem; height: .35rem; border-radius: 50%; background: #6f9988; transform: translateY(-.08rem); }
+.solution-showcase--featured .solution-showcase__outcomes li::before { background: #cbe6ad; }
+.solution-showcase__cta { justify-self: start; gap: .65rem; margin-top: .15rem; }
+.solution-showcase--featured .solution-showcase__cta { background: #fff; color: #35534a; }
+.solution-showcase--featured .solution-showcase__cta:hover { background: #f7f0e7; }
+
+@media (min-width: 768px) {
+  .solutions-hero .container { grid-template-columns: minmax(0, 1.25fr) minmax(19rem, .75fr); align-items: end; }
+  .solutions-hero__summary { padding-bottom: .6rem; }
+  .solution-showcase__layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: start; }
+  .solution-showcase__intro { grid-column: 1; grid-row: 1; }
+  .solution-showcase__visual { grid-column: 2; grid-row: 1 / 3; }
+  .solution-showcase__details { grid-column: 1; grid-row: 2; }
+  .solution-showcase--reverse .solution-showcase__layout { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .solution-showcase--reverse .solution-showcase__visual { grid-column: 1; }
+  .solution-showcase--reverse .solution-showcase__intro, .solution-showcase--reverse .solution-showcase__details { grid-column: 2; }
+  .solution-showcase__visual > div { aspect-ratio: 4 / 5; }
+  .solution-showcase--featured .solution-showcase__layout { display: grid; grid-template-columns: 1fr 1fr; }
+  .solution-showcase--featured .solution-showcase__intro { grid-column: 1 / -1; max-width: 75rem; }
+  .solution-showcase--featured .solution-showcase__visual { grid-column: 1 / -1; grid-row: 2; }
+  .solution-showcase--featured .solution-showcase__details { grid-column: 1 / -1; grid-row: 3; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+  .solution-showcase--featured .solution-showcase__cta { grid-column: 1 / -1; }
+}
+
+@media (min-width: 1180px) {
+  .solution-showcase--featured .solution-showcase__intro h2 { max-width: 16ch; }
+  .solution-showcase--featured .solution-showcase__visual > div { aspect-ratio: 2.2 / 1; }
+  .solution-showcase:not(.solution-showcase--featured) .solution-showcase__layout { gap: clamp(5rem, 8vw, 10rem); }
+}

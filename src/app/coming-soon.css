@@ -1,0 +1,33 @@
+.coming-soon { background: #fbfaf6; overflow: clip; }
+.coming-soon__hero { min-height: calc(100svh - 6rem); display: grid; gap: clamp(2rem, 4vw, 5rem); align-items: center; padding-block: clamp(2rem, 5vw, 4.5rem) clamp(4rem, 7vw, 6rem); }
+.coming-soon__copy { min-width: 0; }
+.coming-soon__eyebrow { display: flex; align-items: center; gap: .75rem; margin-bottom: clamp(2.2rem, 5vw, 5rem); color: #35534a; font-size: .68rem; font-weight: 700; letter-spacing: .18em; line-height: 1.4; }
+.coming-soon__eyebrow span { width: 8px; height: 8px; flex: 0 0 auto; border-radius: 50%; background: #6f9988; box-shadow: 0 0 0 5px #e4eee5; }
+.coming-soon h1 { max-width: 11ch; margin: 0 0 1.6rem; color: #263e35; font-size: clamp(3.7rem, 10.3vw, 7.75rem); line-height: .97; letter-spacing: -.075em; text-wrap: balance; }
+.coming-soon__description { max-width: 36rem; margin: 0; color: #54685e; font-size: clamp(1rem, 1.55vw, 1.2rem); line-height: 1.65; text-wrap: pretty; }
+.coming-soon__actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: clamp(1.8rem, 3vw, 2.5rem); }
+.coming-soon__actions .button { min-height: 52px; padding-inline: 1.45rem; gap: 1.1rem; }
+.coming-soon__actions .button--secondary { border-color: #bdcbc0; background: transparent; }
+.coming-soon__aside { display: flex; align-items: center; gap: .9rem; margin-top: clamp(3rem, 8vw, 8rem); color: #637b6c; font-size: .66rem; font-weight: 700; letter-spacing: .16em; white-space: nowrap; }
+.coming-soon__aside-line { width: clamp(2rem, 5vw, 4rem); height: 1px; background: #9db4a5; }
+.coming-soon__visual-wrap { min-width: 0; width: 100%; }
+.coming-soon__visual { position: relative; display: flex; flex-direction: column; justify-content: space-between; isolation: isolate; min-height: clamp(31rem, 46vw, 43rem); overflow: hidden; border: 1px solid #d7e0d7; border-radius: clamp(1.2rem, 2vw, 2rem); background: radial-gradient(circle at 65% 34%, #e9f2e7 0%, transparent 43%), linear-gradient(145deg, #f3f3e9, #dfebdf 95%); box-shadow: 0 26px 70px rgba(31, 65, 47, .06); }
+.coming-soon--ai .coming-soon__visual { border-color: #244638; background: radial-gradient(circle at 60% 36%, #466956, transparent 47%), linear-gradient(145deg, #244838, #173528); color: #f3f5ec; }
+.coming-soon__background { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+.coming-soon__visual-shade { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, transparent 50%, rgba(238, 246, 235, .83) 100%); }
+.coming-soon--ai .coming-soon__visual-shade { background: linear-gradient(180deg, rgba(20, 45, 33, .15) 0%, rgba(13, 37, 25, .82) 100%); }
+.coming-soon__visual.has-media .coming-soon__visual-shade { background: linear-gradient(180deg, rgba(14, 35, 25, .38), rgba(14, 35, 25, .74)); }
+.coming-soon__visual.has-media { color: #fff; }
+.coming-soon__visual-top { display: flex; justify-content: space-between; gap: 1rem; padding: clamp(1.25rem, 2.2vw, 2rem); font-size: .65rem; font-weight: 700; letter-spacing: .16em; }
+.coming-soon__monogram { position: absolute; inset: 12% 0 auto; z-index: -1; color: rgba(53, 83, 74, .095); font-size: clamp(17rem, 38vw, 37rem); font-weight: 600; letter-spacing: -.17em; line-height: .8; text-align: center; user-select: none; }
+.coming-soon--ai .coming-soon__monogram { color: rgba(222, 239, 217, .11); font-size: clamp(10rem, 28vw, 29rem); letter-spacing: -.13em; inset-block-start: 18%; }
+.coming-soon__visual.has-media .coming-soon__monogram { display: none; }
+.coming-soon__visual-bottom { padding: clamp(1.25rem, 2.2vw, 2rem); }
+.coming-soon__visual-bottom p { margin: 0 0 1.15rem; font-size: .62rem; font-weight: 700; letter-spacing: .18em; }
+.coming-soon__visual-bottom ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem 1rem; margin: 0; padding: 0; list-style: none; }
+.coming-soon__visual-bottom li { display: flex; align-items: baseline; gap: .65rem; border-top: 1px solid currentColor; padding-top: .65rem; font-size: clamp(1.13rem, 1.7vw, 1.45rem); font-weight: 500; letter-spacing: -.04em; line-height: 1.2; }
+.coming-soon__visual-bottom li span { font-size: .6rem; letter-spacing: 0; opacity: .58; }
+@media (min-width: 900px) { .coming-soon__hero { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); } .coming-soon__copy { padding-block: 3rem; } }
+@media (max-width: 899px) { .coming-soon__hero { gap: 2.5rem; } .coming-soon__aside { margin-top: 2.8rem; } .coming-soon__visual { min-height: 25rem; } }
+@media (max-width: 599px) { .coming-soon__hero { padding-top: 1.7rem; gap: 2rem; } .coming-soon__eyebrow { margin-bottom: 2.5rem; } .coming-soon h1 { font-size: clamp(3.35rem, 12.2vw, 4.7rem); margin-bottom: 1.15rem; } .coming-soon__description { max-width: 32rem; font-size: 1rem; line-height: 1.55; } .coming-soon__actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; margin-top: 1.65rem; } .coming-soon__actions .button { min-width: 0; padding-inline: .75rem; gap: .35rem; font-size: .8rem; white-space: nowrap; } .coming-soon__actions .button svg { width: 15px; flex: 0 0 auto; } .coming-soon__aside { margin-top: 2rem; } .coming-soon__visual { min-height: 22rem; } .coming-soon__monogram { font-size: 19rem; } .coming-soon--ai .coming-soon__monogram { font-size: 13rem; } .coming-soon__visual-bottom ul { gap: .6rem; } .coming-soon__visual-bottom li { font-size: 1.05rem; } }
+@media (max-width: 374px) { .coming-soon h1 { font-size: 3.2rem; } .coming-soon__actions .button { font-size: .74rem; } .coming-soon__visual-bottom li { font-size: .98rem; } }
